@@ -1,0 +1,19 @@
+**
+ * returns an element of [type] with unlimited attributes set
+ * first argument is always the tag name (a, input, div, span etc) 
+ * createElm('input','type=button','value=button','attr=343');
+ * @param {Object} type
+ */
+function newElm(type){
+	
+	if(arguments.length < 1) return false;
+	
+	var elm = document.createElement(type);
+	
+	for (var i=1; i< arguments.length; i++){
+		var tmp = arguments[i].split("=",2);
+		elm.setAttribute(tmp[0],tmp[1]);
+	}
+	
+	return elm;
+}
