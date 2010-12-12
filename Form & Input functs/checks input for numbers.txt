@@ -1,0 +1,19 @@
+/**
+*
+* called on keyup event on an input - returns false if not a number
+* the commented elm.value = "1"; can be changed to have the input revert to any number required if NaN pressed
+*
+*/
+
+
+function onlyNumbers(e){
+    
+    if (!e) var e = window.event; // for trans-browser compatibility
+    var elm = document.attachEvent ? e.srcElement : e.target;
+    var charCode = e.which || e.keyCode;
+    
+    if (charCode > 31 && (charCode < 48 || charCode > 57)){
+      elm.value = "1";
+      return false;
+    }else return true;
+}
