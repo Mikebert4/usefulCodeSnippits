@@ -17,3 +17,4 @@ function onlyNumbers(e){
       return false;
     }else return true;
 }
+//NOTE: You could also use filter_var($input,FILTER_VALIDATE_INT) [or FILTER_VALIDATE_FLOAT] to achieve similar results. CTD.
