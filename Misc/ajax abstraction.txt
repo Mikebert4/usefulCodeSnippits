@@ -18,6 +18,8 @@ function ajax(url,funct){
 	 			funct(xmlDoc);
 	 		}
 	 	}
+	}else{
+		console.log('Non function passed to ajax()!');
 	}
 	xmlhttp.open("GET",url+"&sid="+Math.random(),true);
     xmlhttp.send(null);
